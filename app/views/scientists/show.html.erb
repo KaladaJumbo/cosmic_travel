@@ -1,0 +1,13 @@
+<h1><%=@scientist.name%></h1>
+<br>
+<h3>field of study: </h3>
+<ul>
+<li><%=@scientist.field_of_study%></li>
+</ul>
+<br>
+<br>
+<%=link_to "edit", edit_scientist_path(@scientist)%>
+<br>
+<br>
+<%=link_to "delete", scientist_path(@scientist), method: "delete", 
+                data: {confirm: "Are you sure?"}%>

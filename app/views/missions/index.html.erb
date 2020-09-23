@@ -1,0 +1,9 @@
+<h1>Mission Index</h1>
+<br>
+<%@missions.each do |mission|%>
+    <em><%=link_to mission.name, mission_path(mission)%></em>
+    <br>
+    <br>
+<%end%>
+
+<%=link_to "Create new mission", new_mission_path%>

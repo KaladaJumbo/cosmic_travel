@@ -1,0 +1,17 @@
+<h1>Create New Scientist Form</h1>
+<br>
+<%@scientist.errors.messages.each do |key, value|%>
+    <div><%="#{key}: #{value[0]}"%></div>
+    <br>
+<%end%>
+<%=form_for(@scientist) do |f|%>
+    <%=f.label "name:"=%>
+    <%=f.text_field :name%>
+    <br>
+    <br>
+    <%=f.label "field of study:"%>
+    <%=f.text_field :field_of_study%>
+    <br>
+    <br>
+    <%=f.submit "create new scientist"%>
+<%end%>

@@ -1,0 +1,5 @@
+<h1>Scientist Index</h1>
+<br>
+<%@scientists.each do |scientist|%>
+    <p><%=link_to scientist.name, scientist_path(scientist)%></p>
+<% end %>
